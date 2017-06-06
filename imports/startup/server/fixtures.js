@@ -121,6 +121,43 @@ Meteor.startup(() => {
         createdAt: new Date(),
       },
       {
+        title: 'Services',
+        url: '/',
+        links: [
+          {
+            title: 'Alerts and Advisories',
+            url: 'http://sarai.ph/advisories',
+            createdAt: new Date()
+          },
+          {
+            title: 'Monitoring',
+            url: 'http://sarai.ph/weather-monitoring',
+            createdAt: new Date()
+          },
+          {
+            title: 'Planting Guide',
+            url: 'http://sarai.ph/rainfall-distribution',
+            createdAt: new Date()
+          },
+          {
+            title: 'SPIDTech',
+            url: 'http://pests.sarai.ph/',
+            createdAt: new Date()
+          },
+          {
+            title: 'Open Data',
+            url: 'http://opendata.sarai.ph/',
+            createdAt: new Date()
+          },
+          {
+            title: 'SARAi Eskwela',
+            url: 'http://portal.sarai.ph/index.php?option=com_content&view=article&id=38&Itemid=319',
+            createdAt: new Date()
+          }
+        ],
+        createdAt: new Date()
+      },
+      {
         title: 'Contact Us',
         url: '/',
         links: [
