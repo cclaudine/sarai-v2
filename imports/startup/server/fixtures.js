@@ -8,7 +8,6 @@ import { Story } from '../../api/story/story.js';
 import { Projects } from '../../api/projects/projects.js';
 import { Services } from '../../api/services/services.js';
 
-
 Meteor.startup(() => {
   // if the Links collection is empty
   if (Links.find().count() === 0) {
@@ -127,35 +126,35 @@ Meteor.startup(() => {
           {
             title: 'Alerts and Advisories',
             url: 'http://sarai.ph/advisories',
-            createdAt: new Date()
+            createdAt: new Date(),
           },
           {
             title: 'Monitoring',
             url: 'http://sarai.ph/weather-monitoring',
-            createdAt: new Date()
+            createdAt: new Date(),
           },
           {
             title: 'Planting Guide',
             url: 'http://sarai.ph/rainfall-distribution',
-            createdAt: new Date()
+            createdAt: new Date(),
           },
           {
             title: 'SPIDTech',
             url: 'http://pests.sarai.ph/',
-            createdAt: new Date()
+            createdAt: new Date(),
           },
           {
             title: 'Open Data',
             url: 'http://opendata.sarai.ph/',
-            createdAt: new Date()
+            createdAt: new Date(),
           },
           {
             title: 'SARAi Eskwela',
             url: 'http://portal.sarai.ph/index.php?option=com_content&view=article&id=38&Itemid=319',
-            createdAt: new Date()
-          }
+            createdAt: new Date(),
+          },
         ],
-        createdAt: new Date()
+        createdAt: new Date(),
       },
       {
         title: 'Contact Us',
@@ -256,8 +255,7 @@ Meteor.startup(() => {
       image: 'http://proptera.com/application/files/2314/2420/9499/iStock_000012551695_Lettuce_Large.jpg'
     }
   ]
-    data.forEach(project => Services.insert(project));
-
+    data.forEach(services => Services.insert(services));
   }
 
   if (Logos.find().count() === 0) {
@@ -356,5 +354,32 @@ Meteor.startup(() => {
     ];
 
     data.forEach(projects => Projects.insert(projects));
+  }
+
+  if (Logos.find().count() === 0) {
+    const data = [
+      {
+        name: 'SARAi',
+        value: 'img/sarai.png',
+        url: '/',
+      },
+      {
+        name: 'DOST',
+        value: 'img/dost.png',
+        url: 'http://www.dost.gov.ph/',
+      },
+      {
+        name: 'PCAARRD',
+        value: 'img/pcaarrd.png',
+        url: 'http://www.pcaarrd.dost.gov.ph/home/portal/',
+      },
+      {
+        name: 'UPLB',
+        value: 'img/uplb.png',
+        url: 'http://www.uplb.edu.ph/',
+      },
+    ];
+
+    data.forEach(logo => Logos.insert(logo));
   }
 });
